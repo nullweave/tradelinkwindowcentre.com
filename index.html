@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tradelinkwindowcentre | Local, Reliable & Professional Tradesmen</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        
+        :root {
+            --bg-grad: linear-gradient(135deg, #090d16, #111827);
+            --card-bg: #18181b;
+            --card-border: #27272a;
+            --text-main: #f8fafc;
+            --text-muted: #a1a1aa;
+            --accent: #6366f1;
+            --accent-hover: #4f46e5;
+            --body-bg: #09090b;
+            --font: 'Inter', sans-serif, sans-serif;
+            --card-radius: 0.75rem;
+            --card-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font);
+            background: var(--body-bg);
+            color: var(--text-muted);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        a:hover {
+            color: var(--accent-hover);
+        }
+    
+        
+        .sidebar {
+            position: fixed;
+            top: 0; left: 0; bottom: 0;
+            width: 320px;
+            background: var(--card-bg);
+            border-right: 1px solid var(--card-border);
+            padding: 4rem 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            z-index: 100;
+        }
+        
+        .main-content {
+            margin-left: 320px;
+            padding: 0;
+        }
+        
+        @media (max-width: 992px) {
+            .sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+                border-right: none;
+                border-bottom: 1px solid var(--card-border);
+                padding: 2rem;
+                flex-direction: row;
+                align-items: center;
+            }
+            .main-content {
+                margin-left: 0;
+            }
+        }
+        
+        .logo-box {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-main);
+            letter-spacing: -1px;
+        }
+        
+        .logo-box span {
+            color: var(--accent);
+        }
+        
+        .side-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        @media (max-width: 992px) {
+            .side-nav {
+                display: none;
+            }
+        }
+        
+        .side-nav a {
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        
+        .side-nav a:hover {
+            color: var(--text-main);
+        }
+        
+        .sidebar-foot {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        
+        .panel {
+            padding: 8rem 10%;
+            border-bottom: 1px solid var(--card-border);
+        }
+        
+        .hero-panel {
+            min-height: 100vh;
+            background: var(--bg-grad);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .sub-accent {
+            color: var(--accent);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+        
+        .title-panel {
+            font-size: clamp(2.5rem, 5vw, 4.2rem);
+            font-weight: 700;
+            color: var(--text-main);
+            line-height: 1.1;
+            margin-bottom: 2rem;
+            letter-spacing: -1.5px;
+        }
+        
+        .desc-panel {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin-bottom: 3rem;
+        }
+        
+        .card-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .simple-card {
+            border-left: 2px solid var(--accent);
+            padding: 1rem 0 1rem 2rem;
+        }
+        
+        .simple-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: 1rem;
+        }
+        
+        input, textarea {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            padding: 1.2rem;
+            color: var(--text-main);
+            border-radius: var(--card-radius);
+            font-family: var(--font);
+            margin-bottom: 1.5rem;
+            width: 100%;
+        }
+        
+        button {
+            background: var(--accent);
+            color: #ffffff;
+            border: none;
+            padding: 1.2rem 3rem;
+            font-weight: 600;
+            border-radius: var(--card-radius);
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        button:hover {
+            background: var(--accent-hover);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="logo-box">Tradelinkwindowcentre<span>.</span></div>
+        <div class="side-nav">
+            <a href="#welcome">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="sidebar-foot">
+            <p>&copy; 2026 Tradelinkwindowcentre</p>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div id="welcome" class="panel hero-panel">
+            <span class="sub-accent">Local, Reliable & Professional Tradesmen</span>
+            <h1 class="title-panel">Bespoke Timber Windows & Traditional Joinery</h1>
+            <p class="desc-panel">Enhance the beauty and insulation of your home with premium, custom-made timber windows and doors.</p>
+            <div>
+                <a href="#contact" class="btn" style="display:inline-block; background:var(--accent); color:#fff; padding:1rem 2.5rem; border-radius:var(--card-radius); font-weight:600;">Get In Touch</a>
+            </div>
+        </div>
+
+        <div id="about" class="panel">
+            <span class="sub-accent">Philosophy</span>
+            <h2 class="title-panel" style="font-size: 2.2rem; margin-bottom: 2rem;">Our Commitment</h2>
+            <p style="font-size: 1.2rem; line-height: 1.8; max-width: 800px;">At Tradelinkwindowcentre, we believe in integrity, innovation, and long-term partnership. Our mission is to empower our clients with the tools and insights they need to navigate complex challenges and seize new opportunities. Whether you are looking to optimize your current setup or launch a brand new venture, we are here to support you every step of the way.</p>
+            <div class="card-row" style="margin-top: 4rem;">
+                <div class="simple-card">
+                    <h3>Handcrafted Timber</h3>
+                    <p>Constructed from high-grade, sustainable hardwoods and softwoods built for longevity.</p>
+                </div>
+                <div class="simple-card">
+                    <h3>Exceptional Insulation</h3>
+                    <p>Modern double and triple glazing integrated seamlessly to keep your home warm.</p>
+                </div>
+                <div class="simple-card">
+                    <h3>Traditional Styles</h3>
+                    <p>Perfect sash and casement designs that preserve the character of period homes.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="services" class="panel">
+            <span class="sub-accent">Solutions</span>
+            <h2 class="title-panel" style="font-size: 2.2rem; margin-bottom: 4rem;">Services</h2>
+            <div class="card-row">
+                <div class="simple-card">
+                    <h3>Timber Window Installation</h3>
+                    <p>Custom casement, sash, and bay windows made and fitted to your specifications.</p>
+                </div>
+                <div class="simple-card">
+                    <h3>Wooden Door Joinery</h3>
+                    <p>Premium front, French, and bi-fold doors designed to make a grand statement.</p>
+                </div>
+                <div class="simple-card">
+                    <h3>Window Restoration</h3>
+                    <p>Draught-proofing, double-glazing retrofits, and repairs for historic windows.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact" class="panel" style="border-bottom:none;">
+            <span class="sub-accent">Inquiry</span>
+            <h2 class="title-panel" style="font-size: 2.2rem; margin-bottom: 2rem;">Contact Us</h2>
+            <p style="margin-bottom: 3rem;">Drop a message to hello@tradelinkwindowcentre.com or fill the form below.</p>
+            <form action="#" onsubmit="alert('Thank you! Your message has been sent.'); return false;" style="max-width: 700px;">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <textarea placeholder="Message Details" rows="5" required></textarea>
+                <button type="submit">Submit Inquiry</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
